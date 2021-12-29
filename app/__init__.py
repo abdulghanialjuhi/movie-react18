@@ -9,7 +9,7 @@ import os
 
 path = os.path.abspath("/Users/abdulghanialjuhi/Desktop/movie-react/movie-fronend/build")
 
-app = Flask(__name__, static_folder=path, static_url_path='')
+app = Flask(__name__, static_folder='../movie-fronend/build', static_url_path='')
 
 bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
