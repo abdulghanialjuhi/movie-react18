@@ -12,7 +12,7 @@ bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
 CORS(app, supports_credentials=True)
 
-x = True
+x = False
 
 if x:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database/data.db'
