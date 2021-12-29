@@ -28,7 +28,6 @@ const useGlobalstate = () => {
   const checkToken = () => {
     httpClient('/home')
     .then((res) => {
-      console.log(res)
       if (res.data) {
        if (res.data.user_info ) {
         setName(res.data.user_info[0])

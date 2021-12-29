@@ -5,9 +5,6 @@ from datetime import timedelta
 from flask_jwt_extended import JWTManager
 from app.settings import SECRET_KEY, SQLALCHOMEY_DATABASE_URI
 from flask_cors import CORS
-import os
-
-path = os.path.abspath("/Users/abdulghanialjuhi/Desktop/movie-react/movie-fronend/build")
 
 app = Flask(__name__, static_folder='../movie-fronend/build', static_url_path='')
 
@@ -15,7 +12,7 @@ bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
 CORS(app, supports_credentials=True)
 
-x = False
+x = True
 
 if x:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database/data.db'

@@ -13,7 +13,7 @@ class PageButton extends Component {
   };
 
   componentDidMount() {
-    const id = this.props.id;
+    const { id } = this.props;
     if (id) {
       if (id > 1) {
         if (id > 3) {
@@ -67,7 +67,7 @@ class PageButton extends Component {
 
   render() {
 
-    const {path} = this.props
+    const { path } = this.props
 
     const id1 = this.props.id;
 

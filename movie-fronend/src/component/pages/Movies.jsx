@@ -35,7 +35,8 @@ function Popular({ name }) {
         setMovies(movies);
         id <= data.total_pages
           ? setIsload(true)
-          : navigate(`/${name}/${data.total_pages}`);
+          : data.total_pages <= 500 ? navigate(`/${name}/${data.total_pages}`) :
+          navigate(`/${name}/500`)
       }
     } catch (err) {
       console.log(err);
@@ -50,9 +51,9 @@ function Popular({ name }) {
           {movies.map((movie) => (
             <DisplayMovies {...movie} key={movie.id} isload={isload} />
             ))}
-          </div>
+        </div>
         <PageButton id={id} path={`/${name}/`}navigate={navigate} />  
-        </>
+      </>
          }
       </>
     );
