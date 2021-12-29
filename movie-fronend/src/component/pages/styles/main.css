@@ -1,0 +1,140 @@
+.movie-containor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.movie {
+  background-color: #f8f9fa;
+  border-radius: 3px;
+  margin: 1rem;
+  width: 210px;
+  height: 370px;
+  position: relative;
+  overflow: hidden;
+  animation: onLoad 0.3s ease-in;
+}
+
+@keyframes onLoad {
+  from {
+    transform: translateY(-15px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.movie img {
+  width: 100%;
+  height: 85%;
+  cursor: pointer;
+}
+
+.movie-info {
+  color: #373b69;
+  display: flex;
+  align-content: center;
+  height: 15%;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 1px;
+}
+
+.titleContainor {
+  width: 85%;
+  display: flex;
+  height: 100%;
+  align-content: center;
+  padding: 10px;
+}
+
+.voteContainor {
+  display: flex;
+  align-content: center;
+  height: 22px;
+  justify-content: center;
+  background-color: black;
+  border-radius: 3px 0px 0px 3px;
+  width: 28px;
+}
+
+.voteContainor span {
+  padding-top: 2.9px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.overview::before {
+  background-color: rgba(0, 0, 0, 0.6);
+  content: "";
+  filter: blur(10px);
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  height: 100%;
+  width: 210px;
+  z-index: -1;
+}
+
+.overview {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(115%);
+  transition: transform 0.3s ease-in;
+  height: 60%;
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.overview::-webkit-scrollbar,
+.overview::-webkit-scrollbar {
+  overflow: hidden;
+}
+
+.overview ul {
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+.overview li {
+  width: 120px;
+}
+
+.overview hr {
+  width: 85%;
+  background-color: gray;
+}
+
+.movie:hover .overview,
+.overview::before {
+  transform: translateY(-25px);
+}
+
+.overview h5 {
+  text-align: center;
+  margin: 4px;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.green {
+  color: rgb(34, 179, 34);
+}
+
+.orange {
+  color: orange;
+}
+
+.red {
+  color: red;
+}

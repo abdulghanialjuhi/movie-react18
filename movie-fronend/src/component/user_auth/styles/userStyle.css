@@ -1,0 +1,95 @@
+.authUser-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar-container {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+  width: 35%;
+  margin: 0 auto;
+  transition: transform 0.2s;
+  position: relative;
+  height: 15%;
+}
+
+.container {
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* .d-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+} */
+
+.login-button,
+.signup-button {
+  text-align: center;
+  width: 45%;
+  height: 2.5rem;
+  border-radius: 5px;
+  background-color: rgb(243, 243, 243);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active-bar {
+  transition: ease-in 0.3s;
+  background-color: #0d6efd;
+  color: white;
+}
+
+.acount-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#active {
+  animation: fade 0.5s ease-in;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 765px) {
+  #confirm-password {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .bar-container {
+    width: 55%;
+  }
+}

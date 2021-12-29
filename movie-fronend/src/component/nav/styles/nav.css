@@ -1,0 +1,125 @@
+nav {
+  padding: 0 10px;
+}
+
+.first-nav {
+  display: flex;
+  align-content: center;
+}
+
+.Search-containor {
+  cursor: pointer;
+  align-items: center;
+  margin: 5px;
+  border-radius: 6px;
+  display: flex;
+  height: 40px;
+}
+
+.expend {
+  animation: expnd 0.5s ease-in;
+  width: 350px;
+  border: rgb(211, 211, 211) 0.1px solid;
+}
+
+@keyframes expnd {
+  from {
+    width: 40px;
+  }
+  to {
+    width: 350px;
+  }
+}
+
+.close {
+  animation: close 0.5s ease-out;
+  width: 40px;
+}
+
+@keyframes close {
+  from {
+    width: 350px;
+  }
+  to {
+    width: 40px;
+  }
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home {
+  cursor: pointer;
+}
+
+.search {
+  height: 97%;
+  width: 95%;
+  background-color: transparent;
+  color: black;
+  border: none;
+  font-size: 17px;
+  font-weight: 400;
+  border-radius: 33px;
+}
+
+.form {
+  align-items: center;
+  height: 96%;
+  width: 95%;
+  display: flex;
+  border-radius: 6px;
+}
+
+.search:focus {
+  outline: none;
+  box-shadow: 0 0 0px;
+}
+
+.fasearch {
+  margin: 0px 10px 0px 10px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.search::placeholder {
+  font-weight: 400;
+  opacity: 0.7;
+  color: gray;
+  font-size: 18px;
+}
+
+@media (max-width: 990px) {
+  .navbar-collapse {
+    display: block;
+  }
+
+  .Search-containor {
+    width: 40px;
+  }
+  .expend {
+    animation: expnd 0.5s ease-in;
+    width: 99%;
+    max-width: 400px;
+  }
+
+  @keyframes expnd {
+    from {
+      width: 40px;
+    }
+    to {
+      width: 99%;
+    }
+  }
+
+  .Search-containor {
+    margin: 5px 0px;
+  }
+
+  .search {
+    background-color: transparent;
+  }
+}
