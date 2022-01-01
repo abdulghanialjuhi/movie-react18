@@ -5,7 +5,7 @@ __pycache__/
 app/trying.py
 app/database
 
-.env
+/.env
 
 .DS_Store
 .env.local
