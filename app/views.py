@@ -8,6 +8,7 @@ from datetime import timedelta, timezone, datetime
 import smtplib
 import random
 import string
+from app.settings import EMAIL_ADDRESS, PASSWORD
 
 main = app
 special_characters = "/[!@#$%^&*()+\-=\[\]{};'\":'\\|,.<>\/?]+/"
@@ -258,12 +259,12 @@ def reset_pass():
         sr = new_characters + new_punctuation
         new_password = ''.join(random.sample(sr, len(sr)))
 
-        sender = 'reactmovie18@gmail.com'
-        receivers = email
-        password = 'Gg44336418'
+        sender = EMAIL_ADDRESS
+        receiver = email
+        password = PASSWORD
         content = f'Hello {user.name} \n\n we have reset your password \n here\'s your new password ' \
                   f'{new_password}'
-        message = 'Subject: {}\n\n{}'.format('reset password', content)
+        message = f'Subject: reset password\n\n{content}'
 
         bcrypt_password = bcrypt.generate_password_hash(
             new_password).decode('utf-8')
@@ -273,8 +274,8 @@ def reset_pass():
             server = smtplib.SMTP('smtp.gmail.com', 587)
             server.starttls()
             server.login(sender, password)
-            server.sendmail(sender, receivers, message)
-            return f'sent to {receivers}'
+            server.sendmail(sender, receiver, message)
+            return f'sent to {receiver}'
         except:
             return 'Failed'
     return 'This email is not registered'
